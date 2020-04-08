@@ -45,10 +45,10 @@ app.controller("ocrController", function($scope, $http){
 	$scope.uploadPicture = function (ele) {
 	  	img.src = URL.createObjectURL(ele.files[0]); 
 	    	img.onload = function() {
-			c.height = img.height/2;
-			c.width = img.width/2;
+			c.height = img.height;
+			c.width = img.width;
 			//draw selected image to canvas
-			ctx.drawImage(img, 0, 0, c.width, c.height);
+			ctx.drawImage(img, 0, 0, c.width/3, c.height/3);
 			//get base64 and set to result section
 			var result = c.toDataURL();
 			$scope.imgBase64 = result.replace('data:image/png;base64,','', result);
