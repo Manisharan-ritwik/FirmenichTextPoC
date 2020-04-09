@@ -1,0 +1,75 @@
+#uploadedPic
+{
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 05px;
+    display: block;
+    width: 500px;
+    height: 500px;
+    border:1px solid #000000;
+    background-image: url("preview.jpg");
+    background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+}
+
+
+.center {
+  margin: auto;
+  width: 100%;
+  padding: 10px;
+}
+
+#logo
+{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+input[type=file] {
+  background-color: grey;
+  border: none;
+  color: white;
+  padding: 7px;
+  cursor: pointer;
+  margin: auto;
+  display: block;
+}
+
+::-webkit-file-upload-button {
+  background: white;
+  color: #0a3882;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 1em;
+
+}
+
+
+#result
+{
+	font-family: "arial", "Comic Sans MS", cursive, sans-serif;
+	text-align: center;
+	color: white;
+}
+
+body, html {
+  height: 100%;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("background.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
