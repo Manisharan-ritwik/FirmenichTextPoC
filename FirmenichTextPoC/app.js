@@ -2,7 +2,7 @@ var app = angular.module("ocrApp", []);
 
 app.controller("ocrController", function($scope, $http){
 	
-	var apiKey = "AIzaSyDBMPY7gGcfyZtbSfT7g31u3vM63aqZfoo";
+	var apiKey = "AIzaSyAWd1Ts-xqQMrvZDT62VXkXw0PgJlfSF-c";//"AIzaSyDBMPY7gGcfyZtbSfT7g31u3vM63aqZfoo";
 	
 	var c = document.getElementById("uploadedPic");
 	c.height = 0;
