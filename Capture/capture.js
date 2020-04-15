@@ -43,8 +43,7 @@
   {
       // check whether we can use facingMode
     let supports = navigator.mediaDevices.getSupportedConstraints();
-    if(navigator.mediaDevices.length>1 && supports['facingMode'] == true ) {
-      alert("enabling flip button");
+    if(supports['facingMode'] == true ) {
       flipBtn.disabled = false;
     }
   }
