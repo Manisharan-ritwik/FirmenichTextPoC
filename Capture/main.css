@@ -63,3 +63,11 @@ h3
 {
   text-align: center;
 }
+
+#flip-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 10px 20px;
+  
+}

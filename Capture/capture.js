@@ -18,22 +18,67 @@
   var canvas = null;
   var photo = null;
   var startbutton = null;
+  var flipBtn = null;
 
-  function startup() {
+  var defaultsOpts = null;
 
-    video = document.getElementById('video');
-    canvas = document.getElementById('canvas');
-    photo = document.getElementById('photo');
-    startbutton = document.getElementById('startbutton');
+  let shouldFaceUser = true;
 
-    navigator.mediaDevices.getUserMedia({video: { facingMode: "environment" }, audio: false})
-    .then(function(stream) {
+  let stream = null;
+
+  function FlipCamera()
+  {
+      if( stream == null ) return
+      // we need to flip, stop everything
+      stream.getTracks().forEach(t => {
+        t.stop();
+      });
+      // toggle / flip
+      shouldFaceUser = !shouldFaceUser;
+      capture();
+  }
+
+
+  function CheckFlipSupport()
+  {
+      // check whether we can use facingMode
+    let supports = navigator.mediaDevices.getSupportedConstraints();
+    if(navigator.mediaDevices.length>1 && supports['facingMode'] == true ) {
+      alert("enabling flip button");
+      flipBtn.disabled = false;
+    }
+  }
+
+  function PlayCamera()
+  {
+    defaultsOpts.video = { facingMode: shouldFaceUser ? 'user' : 'environment' }
+      navigator.mediaDevices.getUserMedia(defaultsOpts)
+    .then(function(_stream) {
+      stream = _stream;
       video.srcObject = stream;
       video.play();
     })
     .catch(function(err) {
       console.log("An error occurred: " + err);
     });
+  }
+
+  function startup() {
+
+    defaultsOpts = { audio: false, video: true }
+
+
+    video = document.getElementById('video');
+    canvas = document.getElementById('canvas');
+    photo = document.getElementById('photo');
+    startbutton = document.getElementById('startbutton');
+    flipBtn  = document.querySelector('#flip-btn');
+
+    CheckFlipSupport();
+
+
+    PlayCamera();
+    
 
     video.addEventListener('canplay', function(ev){
       if (!streaming) {
@@ -56,6 +101,11 @@
 
     startbutton.addEventListener('click', function(ev){
       takepicture();
+      ev.preventDefault();
+    }, false);
+
+    flipBtn.addEventListener('click', function(ev){
+      FlipCamera();
       ev.preventDefault();
     }, false);
     
