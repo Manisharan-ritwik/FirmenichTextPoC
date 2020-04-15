@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>OCR</title>
+	<link rel="stylesheet" type="text/css" href="applook.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+</head>
+<body class="bg" ng-app="ocrApp" ng-controller="ocrController">
+	<div class="center">
+		<img id="logo" src="logo.png">
+
+	  	<canvas id="uploadedPic" width="500" height="500"></canvas>
+		<input type="file" onchange="angular.element(this).scope().uploadPicture( this)">
+		<a id="resulturl" href="#"><h3 id="result">{{ result }}</h3></a>
+
+	</div>
+	
+</body>
+<script type="text/javascript" src="app.js"></script>
+</html>

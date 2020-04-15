@@ -1,20 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>OCR</title>
-	<link rel="stylesheet" type="text/css" href="applook.css">
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<title>Firmenich Ritwik PoC Native</title>
+	<link rel="stylesheet" type="text/css" href="pagelook.css">
 </head>
-<body class="bg" ng-app="ocrApp" ng-controller="ocrController">
-	<div class="center">
-		<img id="logo" src="logo.png">
+<body>
+	<img src="logo.png">
+	<a href="Capture/index.html"><button>Capture</button></a>
+	<a href="Pick/index.html"><button>Pick</button></a>
 
-	  	<canvas id="uploadedPic" width="500" height="500"></canvas>
-		<input type="file" onchange="angular.element(this).scope().uploadPicture( this)">
-		<h3 id="result">{{ result }}</h3>
-
-	</div>
-	
 </body>
-<script type="text/javascript" src="app.js"></script>
 </html>

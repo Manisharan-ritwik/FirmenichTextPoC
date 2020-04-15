@@ -1,0 +1,38 @@
+button
+{
+	padding: 10px;
+	width: 200px;
+	height: 65px;
+	font-size: 20px;
+	color: white;
+	background: #3072c2;
+	outline: none;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	display: block;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	margin-left: auto;
+	margin-right: auto;
+}
+button:active {
+  transform: translateY(2px);
+}
+
+img
+{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 150px;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+a:visited
+{
+	text-decoration: none;
+}
+
