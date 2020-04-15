@@ -35,7 +35,7 @@
       });
       // toggle / flip
       shouldFaceUser = !shouldFaceUser;
-      capture();
+      PlayCamera();
   }
 
 
