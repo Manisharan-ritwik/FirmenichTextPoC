@@ -39,7 +39,7 @@ app.controller("ocrController", function($scope, $http){
 		      r = r.replace(/\s/g,'');
 
 		      r = r.toLowerCase();
-
+		      r = r.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '');
 		      r = "http://ritwiksoftware.com/clients/firmenich_dev/"+r;
 
 		      document.getElementById("result").innerHTML = r;

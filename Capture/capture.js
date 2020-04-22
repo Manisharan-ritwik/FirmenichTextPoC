@@ -173,12 +173,12 @@
         var result = response.responses[0].fullTextAnnotation.text;// "882134 TFS1287 TEA FLEXAROME FLAVOR LOTNO: 1003620774 -86010478 FP> 100 C UNO: EXP DATE 180 Lot: HO17"
 
       result = result.split("FLAVOR")[0]+"FLAVOR";
-
       result = result.replace(/\s/g,'');
-
       result = result.toLowerCase();
-
+      result = result.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '');
       result = "http://ritwiksoftware.com/clients/firmenich_dev/"+result;
+
+
 
       document.getElementById("resultdisplay").innerHTML = result;
       document.getElementById("resulturl").href = result;
