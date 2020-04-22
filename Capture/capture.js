@@ -178,7 +178,7 @@
 
       result = result.toLowerCase();
 
-      result = "http://ritwiksoftware.com/clients/firmenich_dev/?producname="+result;
+      result = "http://ritwiksoftware.com/clients/firmenich_dev/"+result;
 
       document.getElementById("resultdisplay").innerHTML = result;
       document.getElementById("resulturl").href = result;

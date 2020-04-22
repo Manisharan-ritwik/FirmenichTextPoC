@@ -40,7 +40,7 @@ app.controller("ocrController", function($scope, $http){
 
 		      r = r.toLowerCase();
 
-		      r = "http://ritwiksoftware.com/clients/firmenich_dev/?producname="+r;
+		      r = "http://ritwiksoftware.com/clients/firmenich_dev/"+r;
 
 		      document.getElementById("result").innerHTML = r;
 		      document.getElementById("resulturl").href = r;
