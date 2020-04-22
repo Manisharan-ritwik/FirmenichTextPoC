@@ -144,7 +144,7 @@
 
 
             // Post a user
-      var url = "https://vision.googleapis.com/v1/images:annotate?key=AIzaSyDBMPY7gGcfyZtbSfT7g31u3vM63aqZfoo";
+      var url = "https://vision.googleapis.com/v1/images:annotate?key=AIzaSyAWd1Ts-xqQMrvZDT62VXkXw0PgJlfSF-c";
 
       var data = {
         "requests": [
